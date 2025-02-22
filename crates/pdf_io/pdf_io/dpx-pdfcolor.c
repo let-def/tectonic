@@ -367,24 +367,6 @@ pdf_color_set_color (const pdf_color *color, char *buffer, size_t buffer_len,cha
   return len;
 }
 
-pdf_color current_fill   = {
-  -1,
-  PDF_COLORSPACE_TYPE_GRAY,
-  1,
-  NULL,
-  {0.0},
-  -1
-};
-
-pdf_color current_stroke = {
-  -1,
-  PDF_COLORSPACE_TYPE_GRAY,
-  1,
-  NULL,
-  {0.0},
-  -1
-};
-
 /*
  * This routine is not a real color matching.
  */
@@ -420,15 +402,6 @@ pdf_color_compare (const pdf_color *color1, const pdf_color *color2)
 }
 
 /* Dvipdfm special */
-pdf_color default_color = {
-  -1,
-  PDF_COLORSPACE_TYPE_GRAY,
-  1,
-  NULL,
-  {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
-  -1
-};
-
 #define DEV_COLOR_STACK_MAX 128
 
 static struct {
